@@ -104,6 +104,7 @@ namespace Hotel_Management.GUI
             this.DanhSachPhong.TabIndex = 11;
             this.DanhSachPhong.Text = "Danh Sách Phòng";
             this.DanhSachPhong.UseVisualStyleBackColor = true;
+            this.DanhSachPhong.Click += new System.EventHandler(this.DanhSachPhong_Click);
             // 
             // button1
             // 
@@ -114,6 +115,7 @@ namespace Hotel_Management.GUI
             this.button1.TabIndex = 10;
             this.button1.Text = "Báo Cáo Mức Độ Sử Dụng Phòng";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ThayDoiQuyDinh
             // 
@@ -124,6 +126,7 @@ namespace Hotel_Management.GUI
             this.ThayDoiQuyDinh.TabIndex = 9;
             this.ThayDoiQuyDinh.Text = "Thay Đổi Quy Định";
             this.ThayDoiQuyDinh.UseVisualStyleBackColor = true;
+            this.ThayDoiQuyDinh.Click += new System.EventHandler(this.ThayDoiQuyDinh_Click);
             // 
             // LapBaoCaoThang
             // 
@@ -134,6 +137,7 @@ namespace Hotel_Management.GUI
             this.LapBaoCaoThang.TabIndex = 8;
             this.LapBaoCaoThang.Text = "Lập Báo Cáo Tháng";
             this.LapBaoCaoThang.UseVisualStyleBackColor = true;
+            this.LapBaoCaoThang.Click += new System.EventHandler(this.LapBaoCaoThang_Click);
             // 
             // LapHoaDonThanhToan
             // 
@@ -144,6 +148,7 @@ namespace Hotel_Management.GUI
             this.LapHoaDonThanhToan.TabIndex = 7;
             this.LapHoaDonThanhToan.Text = "Lập Hóa Đơn Thanh Toán";
             this.LapHoaDonThanhToan.UseVisualStyleBackColor = true;
+            this.LapHoaDonThanhToan.Click += new System.EventHandler(this.LapHoaDonThanhToan_Click);
             // 
             // LapPhieuThuePhong
             // 
@@ -154,6 +159,7 @@ namespace Hotel_Management.GUI
             this.LapPhieuThuePhong.TabIndex = 6;
             this.LapPhieuThuePhong.Text = "Lập Phiếu Thuê Phòng";
             this.LapPhieuThuePhong.UseVisualStyleBackColor = true;
+            this.LapPhieuThuePhong.Click += new System.EventHandler(this.LapPhieuThuePhong_Click);
             // 
             // DanhMucPhong
             // 
@@ -164,6 +170,7 @@ namespace Hotel_Management.GUI
             this.DanhMucPhong.TabIndex = 5;
             this.DanhMucPhong.Text = "Lập Danh Mục Phòng";
             this.DanhMucPhong.UseVisualStyleBackColor = true;
+            this.DanhMucPhong.Click += new System.EventHandler(this.DanhMucPhong_Click);
             // 
             // TimPhong
             // 
@@ -174,6 +181,7 @@ namespace Hotel_Management.GUI
             this.TimPhong.TabIndex = 0;
             this.TimPhong.Text = "Tìm Phòng";
             this.TimPhong.UseVisualStyleBackColor = true;
+            this.TimPhong.Click += new System.EventHandler(this.TimPhong_Click);
             // 
             // tabPage4
             // 
@@ -204,6 +212,7 @@ namespace Hotel_Management.GUI
             this.button6.TabIndex = 12;
             this.button6.Text = "Phục Hồi Dữ Liệu";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
             // 
@@ -214,6 +223,7 @@ namespace Hotel_Management.GUI
             this.button8.TabIndex = 11;
             this.button8.Text = "Sao Lưu Dữ Liệu";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -224,6 +234,7 @@ namespace Hotel_Management.GUI
             this.button7.TabIndex = 10;
             this.button7.Text = "Export Báo Cáo";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -234,6 +245,7 @@ namespace Hotel_Management.GUI
             this.button4.TabIndex = 9;
             this.button4.Text = "Export Khách Phòng";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -244,6 +256,7 @@ namespace Hotel_Management.GUI
             this.button5.TabIndex = 8;
             this.button5.Text = "Import Khách Hàng";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -254,6 +267,7 @@ namespace Hotel_Management.GUI
             this.button3.TabIndex = 7;
             this.button3.Text = "Export Phòng";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -264,6 +278,7 @@ namespace Hotel_Management.GUI
             this.button2.TabIndex = 6;
             this.button2.Text = "Import Phòng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
