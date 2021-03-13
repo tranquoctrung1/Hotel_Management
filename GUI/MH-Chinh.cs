@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +40,12 @@ namespace Hotel_Management.GUI
 
         private void LapBaoCaoThang_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Bao_Cao_Danh_Thu_Theo_Loai_Phong doanhThu = new Bao_Cao_Danh_Thu_Theo_Loai_Phong();
             ShowUserControl.showControl(doanhThu, MHContent);
+=======
+          
+>>>>>>> feature/timkiem
         }
 
         private void ThayDoiQuyDinh_Click(object sender, EventArgs e)
@@ -57,12 +62,14 @@ namespace Hotel_Management.GUI
 
         private void TimPhong_Click(object sender, EventArgs e)
         {
-
+            Tra_Cuu TraCuu = new Tra_Cuu();
+            ShowUserControl.showControl(TraCuu, MHContent);
         }
 
         private void DanhMucPhong_Click(object sender, EventArgs e)
         {
-
+            Lap_Danh_Muc_Phong lapDanhMucSachPhong = new Lap_Danh_Muc_Phong();
+            ShowUserControl.showControl(lapDanhMucSachPhong, MHContent);
         }
 
         private void button2_Click(object sender, EventArgs e)

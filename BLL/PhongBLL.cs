@@ -12,44 +12,44 @@ namespace Hotel_Management.BLL
     {
         public DataTable loadPhongChuaThue()
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadPhongChuaThue();
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadPhongChuaThue();
         }
 
         public DataTable loadPhongDaThue()
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadPhongDaThue();
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadPhongDaThue();
         }
 
         public string loadTenPhong(string maPhong)
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadTenPhong(maPhong);
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadTenPhong(maPhong);
         }
 
         public DateTime loadNgayThuePhong(string maPhong)
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadNgayThuePhong(maPhong);
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadNgayThuePhong(maPhong);
         }
 
         public double loadDonGia(string maPhong)
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadDonGia(maPhong);
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadDonGia(maPhong);
         }
 
         public double loadPhuThuNuocNgoai(string maPhong)
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadPhuThuNuocNgoai(maPhong);
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadPhuThuNuocNgoai(maPhong);
         }
 
         public double loadTiLePhuThuNuocNgoai(string maPhong)
         {
-            PhongDAL phongDAO = new PhongDAL();
-            return phongDAO.loadTiLePhuThuNuocNgoai(maPhong);
+            PhongDAL phongDAL = new PhongDAL();
+            return phongDAL.loadTiLePhuThuNuocNgoai(maPhong);
         }
     }
 }

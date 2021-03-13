@@ -96,35 +96,47 @@
   <ItemGroup>
     <Compile Include="BLL\init.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
+    <Compile Include="BLL\LapDanhMucPhongBLL.cs" />
     <Compile Include="BLL\LapPhieuThuePhongBLL.cs" />
+    <Compile Include="BLL\LoaiPhongBLL.cs" />
+    <Compile Include="BLL\LoaiTinhTrangBLL.cs" />
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
     <Compile Include="BLL\xlLapHoaDonBLL.cs" />
     <Compile Include="BLL\xlThayDoiQuyDinhBLL.cs" />
     <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
+    <Compile Include="BLL\xlTraCuuPhongBLL.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
-    <Compile Include="DAL\KhachHangDTO.cs" />
+    <Compile Include="DAL\LapDanhMucPhongDAL.cs" />
     <Compile Include="DAL\LapPhieuThuePhongDAL.cs" />
-    <Compile Include="DAL\LoaiKhachHangDTO.cs" />
-    <Compile Include="DAL\LoaiPhongDTO.cs" />
-    <Compile Include="DAL\LoaiTinhTrangDTO.cs" />
+    <Compile Include="DAL\LoaiPhongDAL.cs" />
+    <Compile Include="DAL\LoaiTinhTrangDAL.cs" />
     <Compile Include="DAL\PhieuCaoBaoDanhThu.cs" />
     <Compile Include="DAL\PhieuCaoBaoMatDo.cs" />
-    <Compile Include="DAL\PhieuThuePhongDTO.cs" />
     <Compile Include="DAL\PhongDAL.cs" />
-    <Compile Include="DAL\PhongDTO.cs" />
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
     <Compile Include="DAL\xlLapHoaDonDAL.cs" />
     <Compile Include="DAL\xlThayDoiQuyDinhDAL.cs" />
+    <Compile Include="DAL\xlTraCuuPhongDAL.cs" />
+    <Compile Include="DTO\BaoCaoMucDo.cs" />
     <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
+    <Compile Include="DTO\ChiTietPhieuThueDTO.cs" />
+    <Compile Include="DTO\ChiTietThuePhongDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
+    <Compile Include="DTO\KhachHangDTO.cs" />
+    <Compile Include="DTO\LoaiKhachHangDTO.cs" />
+    <Compile Include="DTO\LoaiPhongDTO.cs" />
+    <Compile Include="DTO\LoaiTinhTrangDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThuDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
+    <Compile Include="DTO\PhieuThueDTO.cs" />
+    <Compile Include="DTO\PhieuThuePhongDTO.cs" />
+    <Compile Include="DTO\PhongDTO.cs" />
     <Compile Include="DTO\ThamSoDTO.cs" />
     <Compile Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs">
       <SubType>UserControl</SubType>
@@ -144,6 +156,16 @@
     <Compile Include="GUI\Lap-Hoa-Don.Designer.cs">
       <DependentUpon>Lap-Hoa-Don.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Lap-Danh-Muc-Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Danh-Muc-Phong.designer.cs">
+      <DependentUpon>Lap-Danh-Muc-Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.Designer.cs" />
     <Compile Include="GUI\Lap-Phieu-Thue-Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +205,11 @@
     </Compile>
     <Compile Include="GUI\Thay-Doi-Quy-Dinh.Designer.cs">
       <DependentUpon>Thay-Doi-Quy-Dinh.cs</DependentUpon>
+    <Compile Include="GUI\Tra-Cuu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Tra-Cuu.Designer.cs">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
@@ -196,6 +223,10 @@
     <EmbeddedResource Include="GUI\Lap-Hoa-Don.resx">
       <DependentUpon>Lap-Hoa-Don.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Danh-Muc-Phong.resx">
+      <DependentUpon>Lap-Danh-Muc-Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Hoa-Don.resx" />
     <EmbeddedResource Include="GUI\Lap-Phieu-Thue-Phong.resx">
       <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +245,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Thay-Doi-Quy-Dinh.resx">
       <DependentUpon>Thay-Doi-Quy-Dinh.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Tra-Cuu.resx">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

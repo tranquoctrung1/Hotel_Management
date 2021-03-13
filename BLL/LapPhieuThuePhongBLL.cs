@@ -12,16 +12,16 @@ namespace Hotel_Management.BLL
     {
         public Int32 ThemPhieuThuePhong(PhieuThuePhongDTO phieuThuePhong, List<ChiTietThuePhongDTO> dSChiTietThuePhongDTO)
         {
-            LapPhieuThuePhongDAL lapPhieuThuePhongDAO = new LapPhieuThuePhongDAL();
+            LapPhieuThuePhongDAL lapPhieuThuePhongDAL = new LapPhieuThuePhongDAL();
 
-            return lapPhieuThuePhongDAO.ThemPhieuThuePhong(phieuThuePhong, dSChiTietThuePhongDTO);
+            return lapPhieuThuePhongDAL.ThemPhieuThuePhong(phieuThuePhong, dSChiTietThuePhongDTO);
         }
 
         public int SoLuongKhachToiDaTrongPhong()
         {
-            LapPhieuThuePhongDAL lapPhieuThuePhongDAO = new LapPhieuThuePhongDAL();
+            LapPhieuThuePhongDAL lapPhieuThuePhongDAL = new LapPhieuThuePhongDAL();
 
-            return lapPhieuThuePhongDAO.SoLuongKhachToiDaTrongPhong();
+            return lapPhieuThuePhongDAL.SoLuongKhachToiDaTrongPhong();
         }
     }
 }
