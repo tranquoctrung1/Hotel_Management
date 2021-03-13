@@ -1,4 +1,4 @@
-﻿using DTO;
+﻿using Hotel_Management.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management.DAL
 {
-    class ReportDAL
+    public class ReportDAL
     {
         public DataTable DanhSachLoaiPhong()
         {

@@ -1,19 +1,20 @@
-﻿using DTO;
-using Hotel_Management.DAL;
+﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel_Management.BLL
+namespace BLL
 {
-    class xlLapHoaDonBLL
+    public class xlLapHoaDonBLL
     {
         public int ThemThanhToan(HoaDonDTO hoaDonDTO, List<ChiTietHoaDonDTO> dSChiTietHoaDonDTO)
         {
-            xlLapHoaDonDAL dao = new xlLapHoaDonDAL();
-            return dao.ThemThanhToan(hoaDonDTO, dSChiTietHoaDonDTO);
+            xlLapHoaDonDAL DAL = new xlLapHoaDonDAL();
+            return DAL.ThemThanhToan(hoaDonDTO, dSChiTietHoaDonDTO);
         }
     }
 }

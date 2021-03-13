@@ -209,6 +209,7 @@ namespace Hotel_Management.GUI
             this.Controls.Add(this.XemDangThue);
             this.Name = "Danh_Sach_Phong";
             this.Size = new System.Drawing.Size(827, 478);
+            this.Load += new System.EventHandler(this.Danh_Sach_Phong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

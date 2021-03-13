@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,40 +40,41 @@ namespace Hotel_Management.GUI
 
         private void LapBaoCaoThang_Click(object sender, EventArgs e)
         {
-            Bao_Cao_Danh_Thu_Theo_Loai_Phong doanhThu = new Bao_Cao_Danh_Thu_Theo_Loai_Phong();
-            ShowUserControl.showControl(doanhThu, MHContent);
+          
         }
 
         private void ThayDoiQuyDinh_Click(object sender, EventArgs e)
         {
-            Thay_Doi_Quy_Dinh ThayDoiQuyDinh = new Thay_Doi_Quy_Dinh();
-            ShowUserControl.showControl(ThayDoiQuyDinh, MHContent);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Report_MatDo reportMD = new Report_MatDo();
-            ShowUserControl.showControl(reportMD, MHContent);
+
         }
 
         private void TimPhong_Click(object sender, EventArgs e)
         {
-
+            Tra_Cuu TraCuu = new Tra_Cuu();
+            ShowUserControl.showControl(TraCuu, MHContent);
         }
 
         private void DanhMucPhong_Click(object sender, EventArgs e)
         {
-
+            Lap_Danh_Muc_Phong lapDanhMucSachPhong = new Lap_Danh_Muc_Phong();
+            ShowUserControl.showControl(lapDanhMucSachPhong, MHContent);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MH_ImportPhong imp = new MH_ImportPhong();
+            ShowUserControl.showControl(imp, MHContent);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            MH_ExportPhong exportPhong = new MH_ExportPhong();
+            ShowUserControl.showControl(exportPhong, MHContent);
         }
 
         private void button5_Click(object sender, EventArgs e)

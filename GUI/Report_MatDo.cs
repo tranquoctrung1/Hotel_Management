@@ -97,7 +97,7 @@ namespace Hotel_Management.GUI
                     }
                     mt.MaPhieuMatDo = MaPhieuBaoCao;
                     mt.Thang = inputMonth.Text;
-                    report.ThemDataVaoPhieuBaoCaoMatDo(mt);
+                    //report.ThemDataVaoPhieuBaoCaoMatDo(mt);
 
                     //MessageBox.Show(mt.MaPhieuMatDo);
                     //MessageBox.Show(mt.MaLoaiPhong);
