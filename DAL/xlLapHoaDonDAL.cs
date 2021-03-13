@@ -1,8 +1,5 @@
 ﻿using DTO;
-<<<<<<< HEAD
-=======
 using Hotel_Management.DAL;
->>>>>>> feature/timkiem
 using System;
 using System.Collections.Generic;
 using System.Data;

@@ -40,12 +40,8 @@ namespace Hotel_Management.GUI
 
         private void LapBaoCaoThang_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             Bao_Cao_Danh_Thu_Theo_Loai_Phong doanhThu = new Bao_Cao_Danh_Thu_Theo_Loai_Phong();
             ShowUserControl.showControl(doanhThu, MHContent);
-=======
-          
->>>>>>> feature/timkiem
         }
 
         private void ThayDoiQuyDinh_Click(object sender, EventArgs e)
