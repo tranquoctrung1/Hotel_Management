@@ -60,10 +60,5 @@ namespace Hotel_Management.GUI
         {
             Load_DanhSach();
         }
-
-        private void Danh_Sach_Phong_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

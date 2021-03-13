@@ -1,4 +1,4 @@
-
+﻿
 namespace Hotel_Management.GUI
 {
     partial class Lap_Hoa_Don

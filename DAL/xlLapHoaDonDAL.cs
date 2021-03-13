@@ -1,5 +1,4 @@
 ﻿using DTO;
-using Hotel_Management.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace Hotel_Management.DAL
 {
     public class xlLapHoaDonDAL
     {

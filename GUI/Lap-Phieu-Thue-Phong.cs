@@ -18,15 +18,15 @@ namespace Hotel_Management.GUI
         {
             InitializeComponent();
         }
-        PhongBLL phongBLL = new PhongBLL();
-        KhachHangBLL khachHangBLL = new KhachHangBLL();
-        LapPhieuThuePhongBLL lapPhieuThuePhongBLL = new LapPhieuThuePhongBLL();
+        PhongBLL phongBus = new PhongBLL();
+        KhachHangBLL khachHangBUS = new KhachHangBLL();
+        LapPhieuThuePhongBLL lapPhieuThuePhongBUS = new LapPhieuThuePhongBLL();
 
         int index = 0;
         int soKhachToiDa = 0;
         private void Lap_Phieu_Thue_Phong_Load(object sender, EventArgs e)
         {
-            soKhachToiDa = lapPhieuThuePhongBLL.SoLuongKhachToiDaTrongPhong();
+            soKhachToiDa = lapPhieuThuePhongBUS.SoLuongKhachToiDaTrongPhong();
             DanhSachPhieuThuePhong.Rows.Add(1);
             noteAmount.Text = "* Số lượng khách tối đa trong một phòng là: " + soKhachToiDa;
             loadData();
@@ -36,12 +36,12 @@ namespace Hotel_Management.GUI
             DanhSachPhieuThuePhong.Rows[index].Cells[0].Value = index + 1;
             DataGridViewComboBoxCell cbMaKhachHang = DanhSachPhieuThuePhong.Rows[index].Cells[1] as DataGridViewComboBoxCell;
 
-            cbMaKhachHang.DataSource = khachHangBLL.loadKhachHang();
+            cbMaKhachHang.DataSource = khachHangBUS.loadKhachHang();
             cbMaKhachHang.DisplayMember = "TenKhachHang";
             cbMaKhachHang.ValueMember = "MaKhachHang";
             cbMaKhachHang.ValueType = typeof(string);
 
-            cbMaPhong.DataSource = phongBLL.loadPhongChuaThue();
+            cbMaPhong.DataSource = phongBus.loadPhongChuaThue();
             cbMaPhong.DisplayMember = "TenPhong";
             cbMaPhong.ValueMember = "MaPhong";
 
@@ -94,7 +94,7 @@ namespace Hotel_Management.GUI
             phieuThuePhongDTO.MaPhong = cbMaPhong.SelectedValue.ToString();
             phieuThuePhongDTO.NgayThue = ngayThuePhong.Value.Date.ToString("yyyy-MM-dd");
 
-            lapPhieuThuePhongBLL.ThemPhieuThuePhong(phieuThuePhongDTO, dSChiTietThuePhongDTO);
+            lapPhieuThuePhongBUS.ThemPhieuThuePhong(phieuThuePhongDTO, dSChiTietThuePhongDTO);
             MessageBox.Show("Thêm thành công");
             DanhSachPhieuThuePhong.Rows.Clear();
             index = 0;
