@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0"
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -100,9 +99,12 @@
     <Compile Include="BLL\LapPhieuThuePhongBLL.cs" />
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="BLL\xlBackupBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
     <Compile Include="BLL\xlLapHoaDonBLL.cs" />
+    <Compile Include="BLL\xlRetoreBLL.cs" />
     <Compile Include="BLL\xlThayDoiQuyDinhBLL.cs" />
+    <Compile Include="DAL\BackupDAL.cs" />
     <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="DAL\PhongDTO.cs" />
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
+    <Compile Include="DAL\RetoreDAL.cs" />
     <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
     <Compile Include="DAL\xlLapHoaDonDAL.cs" />
     <Compile Include="DAL\xlThayDoiQuyDinhDAL.cs" />
@@ -127,6 +130,12 @@
     <Compile Include="DTO\PhieuCaoBaoDanhThuDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
     <Compile Include="DTO\ThamSoDTO.cs" />
+    <Compile Include="GUI\Backup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +172,12 @@
     <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.Designer.cs">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH-Restore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-Restore.Designer.cs">
+      <DependentUpon>MH-Restore.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Report_MatDo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,7 +194,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="GUI\ShowUserControl.cs" />
-
     <Compile Include="GUI\Thay-Doi-Quy-Dinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +203,9 @@
     <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.resx">
       <DependentUpon>Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoMatDo.resx">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-Restore.resx">
+      <DependentUpon>MH-Restore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report_MatDo.resx">
       <DependentUpon>Report_MatDo.cs</DependentUpon>

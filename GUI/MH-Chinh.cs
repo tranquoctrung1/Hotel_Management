@@ -92,12 +92,14 @@ namespace Hotel_Management.GUI
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Backup backup = new Backup();
+            ShowUserControl.showControl(backup, MHContent);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            MH_Restore mH_Restore = new MH_Restore();
+            ShowUserControl.showControl(mH_Restore, MHContent);
         }
     }
 }
