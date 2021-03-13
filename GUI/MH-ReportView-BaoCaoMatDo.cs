@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_Management.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace Hotel_Management.GUI
             InitializeComponent();
         }
 
-        ReportBUS xl = new ReportBUS();
+        ReportBLL xl = new ReportBLL();
         private void MH_ReportView_BaoCaoMatDo_Load(object sender, EventArgs e)
         {
             string MaPhong = TruyenDuLieuManHinh.MaPhong;
@@ -28,10 +29,10 @@ namespace Hotel_Management.GUI
             baocao = xl.PhieuCaoBaoMatDo(Thang);
 
 
-            rpMatDo rp = new rpMatDo();
-            rp.SetDataSource(baocao);
+            //rpMatDo rp = new rpMatDo();
+            //rp.SetDataSource(baocao);
 
-            CrytalView.ReportSource = rp;
+            //CrytalView.ReportSource = rp;
         }
     }
 }

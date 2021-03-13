@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel_Management.DAL
+namespace Hotel_Management.DTO
 {
     class init
     {

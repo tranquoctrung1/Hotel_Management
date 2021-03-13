@@ -95,13 +95,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\init.cs" />
+    <Compile Include="BLL\KhachHangBLL.cs" />
+    <Compile Include="BLL\LapPhieuThuePhongBLL.cs" />
+    <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
+    <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
     <Compile Include="DAL\init.cs" />
+    <Compile Include="DAL\KhachHangDAL.cs" />
+    <Compile Include="DAL\KhachHangDTO.cs" />
+    <Compile Include="DAL\LapPhieuThuePhongDAL.cs" />
+    <Compile Include="DAL\LoaiKhachHangDTO.cs" />
+    <Compile Include="DAL\LoaiPhongDTO.cs" />
+    <Compile Include="DAL\LoaiTinhTrangDTO.cs" />
+    <Compile Include="DAL\PhieuCaoBaoDanhThu.cs" />
+    <Compile Include="DAL\PhieuCaoBaoMatDo.cs" />
+    <Compile Include="DAL\PhieuThuePhongDTO.cs" />
+    <Compile Include="DAL\PhongDAL.cs" />
+    <Compile Include="DAL\PhongDTO.cs" />
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
-    <Compile Include="DTO\init.cs" />
+    <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
+    <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
+    <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
     <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
+    <Compile Include="DTO\ThamSoDTO.cs" />
+    <Compile Include="GUI\Danh-Sach-Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Danh-Sach-Phong.Designer.cs">
+      <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lap-Phieu-Thue-Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Phieu-Thue-Phong.Designer.cs">
+      <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MH-Chinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +145,16 @@
     <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.Designer.cs">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ShowUserControl.cs" />
+    <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Danh-Sach-Phong.resx">
+      <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Phieu-Thue-Phong.resx">
+      <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-Chinh.resx">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,6 @@ namespace Hotel_Management.GUI
         public static LoaiTinhTrangDTO tt = new LoaiTinhTrangDTO();
         public static KhachHangDTO kh = new KhachHangDTO();
         public static LoaiKhachHangDTO lkh = new LoaiKhachHangDTO();
-        public static ChiTietHoaDonDTO cthd = new ChiTietHoaDonDTO();
+        //public static ChiTietHoaDonDTO cthd = new ChiTietHoaDonDTO();
     }
 }

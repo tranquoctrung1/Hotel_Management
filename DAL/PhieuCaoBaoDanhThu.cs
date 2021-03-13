@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace Hotel_Management.DTO
 {
-    public class PhieuCaoBaoDanhThu
+   public  class PhieuCaoBaoDanhThu
     {
         string _maPhieuBaoCao;
         string _thang;
