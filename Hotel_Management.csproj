@@ -100,6 +100,7 @@
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
+    <Compile Include="BLL\xlLapHoaDonBLL.cs" />
     <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -116,16 +117,30 @@
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
+    <Compile Include="DAL\xlLapHoaDonDAL.cs" />
     <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
+    <Compile Include="DTO\PhieuCaoBaoDanhThuDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
     <Compile Include="DTO\ThamSoDTO.cs" />
+    <Compile Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.Designer.cs">
+      <DependentUpon>Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Danh-Sach-Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Danh-Sach-Phong.Designer.cs">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.Designer.cs">
+      <DependentUpon>Lap-Hoa-Don.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lap-Phieu-Thue-Phong.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +164,14 @@
     <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.resx">
+      <DependentUpon>Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Danh-Sach-Phong.resx">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Hoa-Don.resx">
+      <DependentUpon>Lap-Hoa-Don.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lap-Phieu-Thue-Phong.resx">
       <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
