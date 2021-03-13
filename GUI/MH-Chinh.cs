@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,12 +34,13 @@ namespace Hotel_Management.GUI
 
         private void LapHoaDonThanhToan_Click(object sender, EventArgs e)
         {
-
+            Lap_Hoa_Don lapHoaDon = new Lap_Hoa_Don();
+            ShowUserControl.showControl(lapHoaDon, MHContent);
         }
 
         private void LapBaoCaoThang_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void ThayDoiQuyDinh_Click(object sender, EventArgs e)
@@ -53,7 +55,8 @@ namespace Hotel_Management.GUI
 
         private void TimPhong_Click(object sender, EventArgs e)
         {
-
+            Tra_Cuu TraCuu = new Tra_Cuu();
+            ShowUserControl.showControl(TraCuu, MHContent);
         }
 
         private void DanhMucPhong_Click(object sender, EventArgs e)

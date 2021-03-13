@@ -100,6 +100,8 @@
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
+    <Compile Include="BLL\xlLapHoaDonBLL.cs" />
+    <Compile Include="BLL\xlTraCuuPhongBLL.cs" />
     <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -116,6 +118,8 @@
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
+    <Compile Include="DAL\xlLapHoaDonDAL.cs" />
+    <Compile Include="DAL\xlTraCuuPhongDAL.cs" />
     <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
@@ -127,6 +131,10 @@
     <Compile Include="GUI\Danh-Sach-Phong.Designer.cs">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Hoa-Don.Designer.cs" />
     <Compile Include="GUI\Lap-Phieu-Thue-Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,12 +154,19 @@
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ShowUserControl.cs" />
+    <Compile Include="GUI\Tra-Cuu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Tra-Cuu.Designer.cs">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Danh-Sach-Phong.resx">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Hoa-Don.resx" />
     <EmbeddedResource Include="GUI\Lap-Phieu-Thue-Phong.resx">
       <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoMatDo.resx">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Tra-Cuu.resx">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
