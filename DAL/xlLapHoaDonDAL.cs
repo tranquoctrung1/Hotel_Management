@@ -1,4 +1,5 @@
 ﻿using DTO;
+using Hotel_Management.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel_Management.DAL
+namespace DAL
 {
     public class xlLapHoaDonDAL
     {
@@ -46,7 +47,7 @@ namespace Hotel_Management.DAL
 
                 // tạo ra mã chi tiết hóa đơn và ghi vào trong database
 
-                for (int i = 0; i < dSChiTietHoaDonDTO.Count; i++)
+                for(int i = 0; i< dSChiTietHoaDonDTO.Count; i++)
                 {
                     string sqlQueryMCTHD = "SELECT MaChiTietHoaDon FROM CHITIETHOADON";
                     DataTable dt_2 = new DataTable();

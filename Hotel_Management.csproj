@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0"
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -81,8 +80,19 @@
     <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\..\Downloads\Compressed\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,37 +105,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ImportPhongBLL.cs" />
     <Compile Include="BLL\init.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
+    <Compile Include="BLL\LapDanhMucPhongBLL.cs" />
     <Compile Include="BLL\LapPhieuThuePhongBLL.cs" />
+    <Compile Include="BLL\LoaiPhongBLL.cs" />
+    <Compile Include="BLL\LoaiTinhTrangBLL.cs" />
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
+    <Compile Include="BLL\xlExportBLL.cs" />
     <Compile Include="BLL\xlLapHoaDonBLL.cs" />
     <Compile Include="BLL\xlThayDoiQuyDinhBLL.cs" />
-    <Compile Include="DAL\ChiTietThuePhongDTO.cs" />
+    <Compile Include="BLL\xlTraCuuPhongBLL.cs" />
+    <Compile Include="DAL\ImportPhongDAL.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
-    <Compile Include="DAL\KhachHangDTO.cs" />
+    <Compile Include="DAL\LapDanhMucPhongDAL.cs" />
     <Compile Include="DAL\LapPhieuThuePhongDAL.cs" />
-    <Compile Include="DAL\LoaiKhachHangDTO.cs" />
-    <Compile Include="DAL\LoaiPhongDTO.cs" />
-    <Compile Include="DAL\LoaiTinhTrangDTO.cs" />
+    <Compile Include="DAL\LoaiPhongDAL.cs" />
+    <Compile Include="DAL\LoaiTinhTrangDAL.cs" />
     <Compile Include="DAL\PhieuCaoBaoDanhThu.cs" />
     <Compile Include="DAL\PhieuCaoBaoMatDo.cs" />
-    <Compile Include="DAL\PhieuThuePhongDTO.cs" />
     <Compile Include="DAL\PhongDAL.cs" />
-    <Compile Include="DAL\PhongDTO.cs" />
     <Compile Include="DAL\Provider.cs" />
     <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DAL\xlDanhSachPhongDAL.cs" />
+    <Compile Include="DAL\xlExportDAL.cs" />
     <Compile Include="DAL\xlLapHoaDonDAL.cs" />
     <Compile Include="DAL\xlThayDoiQuyDinhDAL.cs" />
+    <Compile Include="DAL\xlTraCuuPhongDAL.cs" />
+    <Compile Include="DTO\BaoCaoMucDo.cs" />
     <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
+    <Compile Include="DTO\ChiTietPhieuThueDTO.cs" />
+    <Compile Include="DTO\ChiTietThuePhongDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
+    <Compile Include="DTO\KhachHangDTO.cs" />
+    <Compile Include="DTO\LoaiKhachHangDTO.cs" />
+    <Compile Include="DTO\LoaiPhongDTO.cs" />
+    <Compile Include="DTO\LoaiTinhTrangDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThuDTO.cs" />
     <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
+    <Compile Include="DTO\PhieuThueDTO.cs" />
+    <Compile Include="DTO\PhieuThuePhongDTO.cs" />
+    <Compile Include="DTO\PhongDTO.cs" />
     <Compile Include="DTO\ThamSoDTO.cs" />
     <Compile Include="GUI\Bao-Cao-Danh-Thu-Theo-Loai-Phong.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +163,12 @@
     </Compile>
     <Compile Include="GUI\Danh-Sach-Phong.Designer.cs">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lap-Danh-Muc-Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lap-Danh-Muc-Phong.Designer.cs">
+      <DependentUpon>Lap-Danh-Muc-Phong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lap-Hoa-Don.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +187,18 @@
     </Compile>
     <Compile Include="GUI\MH-Chinh.Designer.cs">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MH-ExportPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-ExportPhong.Designer.cs">
+      <DependentUpon>MH-ExportPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MH-ImportPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-ImportPhong.Designer.cs">
+      <DependentUpon>MH-ImportPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.cs">
       <SubType>Form</SubType>
@@ -179,12 +222,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="GUI\ShowUserControl.cs" />
-
     <Compile Include="GUI\Thay-Doi-Quy-Dinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Thay-Doi-Quy-Dinh.Designer.cs">
       <DependentUpon>Thay-Doi-Quy-Dinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Tra-Cuu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Tra-Cuu.Designer.cs">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\TruyenDuLieuManHinh.cs" />
     <Compile Include="Program.cs" />
@@ -195,6 +243,9 @@
     <EmbeddedResource Include="GUI\Danh-Sach-Phong.resx">
       <DependentUpon>Danh-Sach-Phong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lap-Danh-Muc-Phong.resx">
+      <DependentUpon>Lap-Danh-Muc-Phong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lap-Hoa-Don.resx">
       <DependentUpon>Lap-Hoa-Don.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-Chinh.resx">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-ExportPhong.resx">
+      <DependentUpon>MH-ExportPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-ImportPhong.resx">
+      <DependentUpon>MH-ImportPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoMatDo.resx">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
@@ -217,6 +274,9 @@
     <EmbeddedResource Include="GUI\Thay-Doi-Quy-Dinh.resx">
       <DependentUpon>Thay-Doi-Quy-Dinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Tra-Cuu.resx">
+      <DependentUpon>Tra-Cuu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -226,6 +286,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

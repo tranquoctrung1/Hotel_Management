@@ -20,7 +20,7 @@ namespace Hotel_Management.DAL
         {
             try
             {
-                var ConnectionString = "Data Source=.;Initial Catalog=QLKS;Integrated Security=True";
+                var ConnectionString = @"Data Source=DESKTOP-FFOHST3\THANHNT0500;Initial Catalog=QLKS;Integrated Security=True";
                 if (Connection == null)
                     Connection = new SqlConnection(ConnectionString);
                 if (Connection.State != ConnectionState.Closed)
