@@ -61,7 +61,8 @@ namespace Hotel_Management.GUI
 
         private void DanhMucPhong_Click(object sender, EventArgs e)
         {
-
+            Lap_Danh_Muc_Phong lapDanhMucSachPhong = new Lap_Danh_Muc_Phong();
+            ShowUserControl.showControl(lapDanhMucSachPhong, MHContent);
         }
 
         private void button2_Click(object sender, EventArgs e)

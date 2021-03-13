@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using Hotel_Management.BLL;
+using BLL;
 
 namespace Hotel_Management
 {

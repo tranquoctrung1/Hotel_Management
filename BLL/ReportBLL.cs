@@ -29,14 +29,14 @@ namespace Hotel_Management.BLL
 
         public DataTable BaoCaoDoanhThu(int month)
         {
-            ReportDAL doanhThuDAO = new ReportDAL();
-            return doanhThuDAO.getRevenue(month);
+            ReportDAL doanhThuDAL = new ReportDAL();
+            return doanhThuDAL.getRevenue(month);
         }
 
         public DataTable BaoCaoMatDo(int month)
         {
-            ReportDAL doanhThuDAO = new ReportDAL();
-            return doanhThuDAO.getMatDo(month);
+            ReportDAL doanhThuDAL = new ReportDAL();
+            return doanhThuDAL.getMatDo(month);
         }
         public string LayMaPhieuBaoCaoCuoiCung()
         {
