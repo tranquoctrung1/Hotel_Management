@@ -1,4 +1,4 @@
-﻿namespace Ltudql_2017
+﻿namespace Hotel_Management.GUI
 {
     partial class MH_ExportKhachHang
     {

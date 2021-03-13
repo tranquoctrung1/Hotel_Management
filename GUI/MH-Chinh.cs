@@ -88,14 +88,15 @@ namespace Hotel_Management.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-           // MH_ExportKhachHang exportKhachHang = new MH_ExportKhachHang();
-            //ShowUserControl.showControl(exportKhachHang, MHContent);
+            MH_ExportKhachHang exportKhachHang = new MH_ExportKhachHang();
+            ShowUserControl.showControl(exportKhachHang, MHContent);
         }
-    
+
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            MH_BaoCao baoCao = new MH_BaoCao();
+            ShowUserControl.showControl(baoCao, MHContent);
         }
 
         private void button8_Click(object sender, EventArgs e)

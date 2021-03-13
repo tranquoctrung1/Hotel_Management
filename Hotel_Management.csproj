@@ -115,6 +115,7 @@
     <Compile Include="BLL\LoaiTinhTrangBLL.cs" />
     <Compile Include="BLL\PhongBLL.cs" />
     <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="BLL\ReportBUS.cs" />
     <Compile Include="BLL\xlBackupBLL.cs" />
     <Compile Include="BLL\xlDanhSachPhongBLL.cs" />
     <Compile Include="BLL\xlExportBLL.cs" />
@@ -194,6 +195,12 @@
     <Compile Include="GUI\Lap-Phieu-Thue-Phong.Designer.cs">
       <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH-BaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-BaoCao.designer.cs">
+      <DependentUpon>MH-BaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MH-Chinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +225,12 @@
     <Compile Include="GUI\MH-ImportPhong.Designer.cs">
       <DependentUpon>MH-ImportPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH-ReportView-BaoCaoDanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-ReportView-BaoCaoDanhThu.designer.cs">
+      <DependentUpon>MH-ReportView-BaoCaoDanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,11 +243,20 @@
     <Compile Include="GUI\MH-Restore.Designer.cs">
       <DependentUpon>MH-Restore.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH_ExportKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH_ExportKhachHang.Designer.cs">
+      <DependentUpon>MH_ExportKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Report_MatDo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Report_MatDo.Designer.cs">
       <DependentUpon>Report_MatDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\rpDoanhThu.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="GUI\rpMatDo.cs">
       <SubType>Component</SubType>
@@ -279,6 +301,9 @@
     <EmbeddedResource Include="GUI\Lap-Phieu-Thue-Phong.resx">
       <DependentUpon>Lap-Phieu-Thue-Phong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-BaoCao.resx">
+      <DependentUpon>MH-BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-Chinh.resx">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,11 +316,17 @@
     <EmbeddedResource Include="GUI\MH-ImportPhong.resx">
       <DependentUpon>MH-ImportPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoDanhThu.resx">
+      <DependentUpon>MH-ReportView-BaoCaoDanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoMatDo.resx">
       <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-Restore.resx">
       <DependentUpon>MH-Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH_ExportKhachHang.resx">
+      <DependentUpon>MH_ExportKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Report_MatDo.resx">
       <DependentUpon>Report_MatDo.cs</DependentUpon>

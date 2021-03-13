@@ -17,14 +17,14 @@ namespace Hotel_Management
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rpMatDo : ReportClass {
+    public class rpDoanhThu : ReportClass {
         
-        public rpMatDo() {
+        public rpDoanhThu() {
         }
         
         public override string ResourceName {
             get {
-                return "rpMatDo.rpt";
+                return "rpDoanhThu.rpt";
             }
             set {
                 // Do nothing
@@ -42,7 +42,7 @@ namespace Hotel_Management
         
         public override string FullResourceName {
             get {
-                return "Ltudql_2017.rpMatDo.rpt";
+                return "Ltudql_2017.rpDoanhThu.rpt";
             }
             set {
                 // Do nothing
@@ -91,9 +91,9 @@ namespace Hotel_Management
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrpMatDo : Component, ICachedReport {
+    public class CachedrpDoanhThu : Component, ICachedReport {
         
-        public CachedrpMatDo() {
+        public CachedrpDoanhThu() {
         }
         
         [Browsable(false)]
@@ -130,7 +130,7 @@ namespace Hotel_Management
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rpMatDo rpt = new rpMatDo();
+            rpDoanhThu rpt = new rpDoanhThu();
             rpt.Site = this.Site;
             return rpt;
         }
