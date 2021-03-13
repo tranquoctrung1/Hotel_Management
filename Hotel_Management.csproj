@@ -82,6 +82,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,19 +95,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\init.cs" />
+    <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="DAL\init.cs" />
+    <Compile Include="DAL\Provider.cs" />
+    <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DTO\init.cs" />
     <Compile Include="DTO\PhieuCaoBaoDanhThu.cs" />
+    <Compile Include="DTO\PhieuCaoBaoMatDo.cs" />
     <Compile Include="GUI\MH-Chinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\MH-Chinh.Designer.cs">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-ReportView-BaoCaoMatDo.Designer.cs">
+      <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\MH-Chinh.resx">
       <DependentUpon>MH-Chinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-ReportView-BaoCaoMatDo.resx">
+      <DependentUpon>MH-ReportView-BaoCaoMatDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
