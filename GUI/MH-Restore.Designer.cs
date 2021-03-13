@@ -148,6 +148,7 @@ namespace Hotel_Management.GUI
             this.Controls.Add(this.label2);
             this.Name = "MH_Restore";
             this.Size = new System.Drawing.Size(549, 248);
+            this.Load += new System.EventHandler(this.MH_Restore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

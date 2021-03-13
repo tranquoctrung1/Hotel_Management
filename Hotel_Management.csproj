@@ -105,6 +105,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ImportKhacHangBLL.cs" />
     <Compile Include="BLL\ImportPhongBLL.cs" />
     <Compile Include="BLL\init.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="BLL\xlThayDoiQuyDinhBLL.cs" />
     <Compile Include="DAL\BackupDAL.cs" />
     <Compile Include="BLL\xlTraCuuPhongBLL.cs" />
+    <Compile Include="DAL\ImportKhachHangDAL.cs" />
     <Compile Include="DAL\ImportPhongDAL.cs" />
     <Compile Include="DAL\init.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -204,6 +206,12 @@
     <Compile Include="GUI\MH-ExportPhong.Designer.cs">
       <DependentUpon>MH-ExportPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MH-ImportKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MH-ImportKhachHang.Designer.cs">
+      <DependentUpon>MH-ImportKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MH-ImportPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -276,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ExportPhong.resx">
       <DependentUpon>MH-ExportPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MH-ImportKhachHang.resx">
+      <DependentUpon>MH-ImportKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MH-ImportPhong.resx">
       <DependentUpon>MH-ImportPhong.cs</DependentUpon>

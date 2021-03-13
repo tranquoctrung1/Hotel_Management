@@ -82,13 +82,16 @@ namespace Hotel_Management.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            MH_ImportKhachHang import = new MH_ImportKhachHang();
+            ShowUserControl.showControl(import, MHContent);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+           // MH_ExportKhachHang exportKhachHang = new MH_ExportKhachHang();
+            //ShowUserControl.showControl(exportKhachHang, MHContent);
         }
+    
 
         private void button7_Click(object sender, EventArgs e)
         {

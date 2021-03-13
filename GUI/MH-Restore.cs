@@ -57,5 +57,10 @@ namespace Hotel_Management.GUI
                 trangthai.Text = "Đang Restore";
             }
         }
+
+        private void MH_Restore_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
