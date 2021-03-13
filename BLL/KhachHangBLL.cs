@@ -12,15 +12,15 @@ namespace Hotel_Management.BLL
     {
         public DataTable loadKhachHang()
         {
-            KhachHangDAL khachHangDAL = new KhachHangDAL();
+            KhachHangDAL khachHangDAO = new KhachHangDAL();
 
-            return khachHangDAL.loadKhachHang();
+            return khachHangDAO.loadKhachHang();
         }
         public DataTable loadKhachHangDangThue(string MaPhong)
         {
-            KhachHangDAL khachHangDAL = new KhachHangDAL();
+            KhachHangDAL khachHangDAO = new KhachHangDAL();
 
-            return khachHangDAL.loadKhachHangDangThue(MaPhong);
+            return khachHangDAO.loadKhachHangDangThue(MaPhong);
         }
     }
 }

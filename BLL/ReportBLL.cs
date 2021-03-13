@@ -1,5 +1,5 @@
-﻿using Hotel_Management.DAL;
-using Hotel_Management.DTO;
+﻿using DTO;
+using Hotel_Management.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management.BLL
 {
-    public class ReportBLL
+    class ReportBLL
     {
         public DataTable DanhSachLoaiPhong()
         {
@@ -29,14 +29,14 @@ namespace Hotel_Management.BLL
 
         public DataTable BaoCaoDoanhThu(int month)
         {
-            ReportDAL doanhThuDAL = new ReportDAL();
-            return doanhThuDAL.getRevenue(month);
+            ReportDAL doanhThuDAO = new ReportDAL();
+            return doanhThuDAO.getRevenue(month);
         }
 
         public DataTable BaoCaoMatDo(int month)
         {
-            ReportDAL doanhThuDAL = new ReportDAL();
-            return doanhThuDAL.getMatDo(month);
+            ReportDAL doanhThuDAO = new ReportDAL();
+            return doanhThuDAO.getMatDo(month);
         }
         public string LayMaPhieuBaoCaoCuoiCung()
         {
