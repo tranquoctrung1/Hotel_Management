@@ -45,12 +45,14 @@ namespace Hotel_Management.GUI
 
         private void ThayDoiQuyDinh_Click(object sender, EventArgs e)
         {
-
+            Thay_Doi_Quy_Dinh ThayDoiQuyDinh = new Thay_Doi_Quy_Dinh();
+            ShowUserControl.showControl(ThayDoiQuyDinh, MHContent);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Report_MatDo reportMD = new Report_MatDo();
+            ShowUserControl.showControl(reportMD, MHContent);
         }
 
         private void TimPhong_Click(object sender, EventArgs e)

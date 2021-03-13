@@ -26,6 +26,7 @@ namespace Hotel_Management.GUI
         KhachHangBLL khachHangBUS = new KhachHangBLL();
         PhongBLL phongBUS = new PhongBLL();
         int index = 0;
+        DateTime ngayHienTai = DateTime.Now;
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -49,7 +50,10 @@ namespace Hotel_Management.GUI
 
         private void ngayThanhToan_ValueChanged(object sender, EventArgs e)
         {
-
+            DateTime NgayTra = ngayThanhToan.Value;
+            //DateTime ngayHienTai1 = ngayThanhToan.SelectedValue
+            //MessageBox.Show(NgayTra.ToString());
+            ngayHienTai = NgayTra;
         }
 
         private void cbKhachHang_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,9 +144,10 @@ namespace Hotel_Management.GUI
             string tenPhong = phongBUS.loadTenPhong(cbMaPhong.SelectedValue.ToString());
 
             DateTime ngayThue = phongBUS.loadNgayThuePhong(cbMaPhong.SelectedValue.ToString());
-            DateTime ngayHienTai = DateTime.Now;
+
 
             double songayThue = (ngayHienTai.Date - ngayThue.Date).TotalDays;
+
             double donGia = phongBUS.loadDonGia(cbMaPhong.SelectedValue.ToString());
             double phuThu = phongBUS.loadPhuThuNuocNgoai(cbMaPhong.SelectedValue.ToString());
             double tiLePhuThu = phongBUS.loadTiLePhuThuNuocNgoai(cbMaPhong.SelectedValue.ToString());
